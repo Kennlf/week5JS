@@ -28,9 +28,10 @@
 
         const names = ["Jørgen", "Dorte", "Arne", "Sebastian", "Ib", "Bo", "Lise"]
         function makelist(){
-            const lis = names.map(name => `<li>${enconde("" + name)}</li>`).join("")
-            document.getElementById("ul1").innerHTML = lis
+            const list = names.map(name => `<li>${name}</li>`).join("")
+            document.getElementById("ul1").innerHTML = list
         }
+
         document.getElementById("initialize").onclick = () => makelist()
 
 
@@ -57,10 +58,6 @@
             names.pop()
             console.log(names)
         }
-
-         /****************************************************************************/
-        /*        Strategy where we are manipulating individual DOM-Elements        */
-        /****************************************************************************/
 
         document.getElementById("btn-b1").onclick = (evt) => {
             evt.preventDefault()
